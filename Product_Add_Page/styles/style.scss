@@ -1,0 +1,125 @@
+$headerHeight: 8vw;
+$footerHeight: 5vw;
+$phoneSize: 481px;
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#main-body{
+    height: 100%;
+    width: 90%;
+}
+
+header{
+    height: Calc($headerHeight - 20px - 3px);
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    font-size: 3vw;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);;
+    justify-content: space-between;
+
+    & h1{
+        font-size: 3vw;
+        margin: 0;
+    }
+}
+
+
+.controll-btn{
+    padding: 5px 10px;
+    background-color: white;
+    
+    transition: all 0.3s ease;
+    &:hover{
+        cursor: pointer;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+}
+
+#cancel-product-btn{
+    background-color: #DF4848;
+    border: 2px solid #DF4848;
+    color: white;
+}
+
+#product_form{
+    height: Calc(100% - $footerHeight - $headerHeight);
+
+
+
+    overflow-y:scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    & input{
+        width: fit-content;
+        margin: 5px;
+    }
+    & .position-box{
+        width: fit-content;
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0px 5px 0px;
+        & input{
+            width: 100px;
+            margin: 0px;
+        }
+        & label{
+            width: 100px;
+        }
+    }
+
+    & #additional-fields > div{
+        border: 1px solid black;
+        margin: 5px;
+        padding: 10px;
+        width: max-content;
+        display: none;
+    }
+
+}
+
+footer{
+    border-top: 3px solid rgba(0, 0, 0, 0.3);;
+    height: Calc($footerHeight - 3px);
+    width: 90%;
+    font-size: 1vw;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:$phoneSize){
+    $headerHeight: 20vw;
+    $footerHeight: 10vw;
+    header{
+        height: Calc($headerHeight - 20px - 3px);
+        font-size: 5vw;
+    }
+    #product-form{
+        height: Calc(100% - $footerHeight - $headerHeight);
+        grid-auto-rows: 80vw;
+        grid-template-columns: 100%;
+
+
+    }
+    footer{
+        height: Calc($footerHeight - 3px);
+        font-size: 3vw;
+    }
+
+}

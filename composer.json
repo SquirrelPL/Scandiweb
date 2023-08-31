@@ -1,0 +1,11 @@
+{
+    "require": {
+        "cocur/slugify": "4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Product_Add_Page\\": "Product_Add_Page/",
+            "App\\Product_Add_Page\\Products\\": "Product_Add_Page/Products"
+        }
+    }
+}

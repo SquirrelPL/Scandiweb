@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="script.js"></script>
+    <title>Scandiweb | Application | Junior Developer</title>
+</head>
+<body>
+    <div id="main-body">
+        <header>
+            <h1 id="the-title">Product Form</h1>
+            <div id="controll-buttons-container">
+                <button id="save-product-btn" class="controll-btn">Save</button>
+                <button id="cancel-product-btn" class="controll-btn" onclick="window.location ='../index.html';">Cancel</button>
+            </div>
+        </header>
+
+        <form id="product_form">
+            <div class="position-box">
+                <label for="sku">SKU </label>
+                <input type="text" id="sku" required>
+
+            </div>
+
+            <div class="position-box">
+                <label for="name">Name </label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="position-box">
+                <label for="price">Price ($) </label>
+                <input type="number" id="price" required>
+            </div><br>
+
+            <label for="productType">Type Switcher</label>
+            <select name="productType" id="productType">
+                <option value="null" selected disabled hidden>Type Switcher</option>
+                <option value="dvd" id="dvd">DVD</option>
+                <option value="book" id="book">Book</option>
+                <option value="furniture" id="book">Furniture</option>
+            </select>
+
+            <div id="additional-fields">
+                <div id="DVD" class="additional-field">
+                    <label for="size">Size (MB)</label>
+                    <input type="number" id="size">
+                </div>
+
+                <div id="Furniture" class="additional-field">
+                    <label for="height">Height (CM)</label>
+                    <input type="number" id="height"><br>
+                    <label for="width">Width (CM)</label>
+                    <input type="number" id="width"><br>
+                    <label for="length">Length (CM)</label>
+                    <input type="number" id="length"><br>
+                </div>
+
+                <div id="Book" class="additional-field">
+                    <label for="weight">Weight (KG)</label>
+                    <input type="number" id="weight">
+                </div>
+
+            </div>
+
+        </form>
+
+        <footer>
+            
+            Scandiweb Test assignment
+        </footer>
+    </div>
+</body>
+</html>
